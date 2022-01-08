@@ -8,7 +8,7 @@ class ComparisonExpressionOutputBuilder(private val comparisonExpression: ArrayL
         val serializableComparisonExpressions = ArrayList<SerializableComparisonExpression>()
         comparisonExpression.forEach { e ->
             val serializableComparisonExpression =
-                SerializableComparisonExpression(e.right.toString(), e.left.toString())
+                SerializableComparisonExpression(e.left.toString(), e.right.toString())
             serializableComparisonExpressions.add(serializableComparisonExpression)
         }
         return ComparisonExpressionOutput(serializableComparisonExpressions)
@@ -17,8 +17,8 @@ class ComparisonExpressionOutputBuilder(private val comparisonExpression: ArrayL
 
 @Serializable
 data class SerializableComparisonExpression(
-    val right: String,
-    val left: String
+    val left: String,
+    val right: String
 )
 
 @Serializable

@@ -25,8 +25,8 @@ $ java -jar presto-query-extractor-all.jar -f PATH/TO/02.sql -e comparisonexpres
 {
     "comparisonExpressions": [
         {
-            "right": "nation.regionkey",
-            "left": "region.regionkey"
+            "left": "region.regionkey",
+            "right": "nation.regionkey"
         }
     ]
 }
