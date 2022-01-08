@@ -17,7 +17,11 @@ Options:
 ### ComparisonExpression
 
 ```
-$ java -jar presto-query-extractor-all.jar -f ../../projects/presto-query-extractor/presto-query-extractor/src/test/resources/02.sql -e comparisonexpression
+$ cat PATH/TO/02.sql
+SELECT name
+FROM nation
+WHERE EXISTS (SELECT * FROM region WHERE region.regionkey = nation.regionkey)
+$ java -jar presto-query-extractor-all.jar -f PATH/TO/02.sql -e comparisonexpression
 {
     "comparisonExpressions": [
         {
@@ -45,7 +49,14 @@ $ java -jar presto-query-extractor-all.jar -q "SELECT * FROM Customers WHERE Cou
 ### Table
 
 ```
-$ java -jar presto-query-extractor-all.jar -f ../../projects/presto-query-extractor/presto-query-extractor/src/test/resources/01.sql -e table
+$ cat PATH/TO/01.sql
+SELECT a, b
+FROM (
+    SELECT a, MAX(b) AS b FROM t
+    WHERE a = c
+    GROUP BY a
+) AS x
+$ java -jar presto-query-extractor-all.jar -f PATH/TO/01.sql -e table
 {
     "tables": [
         "t"
