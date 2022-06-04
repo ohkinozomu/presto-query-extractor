@@ -27,7 +27,7 @@ dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
 
     // https://mvnrepository.com/artifact/com.facebook.presto/presto-parser
-    implementation("com.facebook.presto:presto-parser:0.273.1")
+    implementation("com.facebook.presto:presto-parser:0.273.2")
 
     // https://mvnrepository.com/artifact/org.jetbrains.kotlinx/kotlinx-cli
     implementation("org.jetbrains.kotlinx:kotlinx-cli:0.3.4")
