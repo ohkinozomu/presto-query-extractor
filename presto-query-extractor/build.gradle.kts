@@ -30,7 +30,7 @@ dependencies {
     implementation("com.facebook.presto:presto-parser:0.280")
 
     // https://mvnrepository.com/artifact/org.jetbrains.kotlinx/kotlinx-cli
-    implementation("org.jetbrains.kotlinx:kotlinx-cli:0.3.5")
+    implementation("org.jetbrains.kotlinx:kotlinx-cli:0.3.6")
 
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.1")
 }
