@@ -23,7 +23,7 @@ jobs:
           mv presto-query-extractor/build/libs/presto-query-extractor-all.jar presto-query-extractor-${{ env.VERSION }}
           zip -r presto-query-extractor-${{ env.VERSION }}.zip presto-query-extractor-${{ env.VERSION }}
       - name: Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           generate_release_notes: true
           files: |
